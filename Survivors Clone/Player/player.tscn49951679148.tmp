@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://rce2ygcp7xub"]
+
+[ext_resource type="Script" uid="uid://bkfa2610ptws8" path="res://Player/player.gd" id="1_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://co37qrh6d1a5g" path="res://Textures/Player/Mujer medio lado .png" id="1_l8h54"]
+[ext_resource type="PackedScene" uid="uid://ov3ijdc1j5u7" path="res://Utility/hurt_box.tscn" id="3_btcbx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
+radius = 6.0
+height = 22.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwnis"]
+size = Vector2(12, 22)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+motion_mode = 1
+script = ExtResource("1_4ntmi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(1.99999, 0)
+scale = Vector2(0.0267578, 0.0267578)
+texture = ExtResource("1_l8h54")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_4ntmi")
+
+[node name="HurtBox" parent="." instance=ExtResource("3_btcbx")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_gwnis")
+
+[connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
+
+[editable path="HurtBox"]

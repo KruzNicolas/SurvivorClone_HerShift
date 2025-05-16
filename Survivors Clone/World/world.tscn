@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6yti8brvmoth"]
+
+[ext_resource type="Texture2D" uid="uid://bsmipirwploqs" path="res://Textures/dirt_full_new.png" id="1_8a836"]
+[ext_resource type="PackedScene" uid="uid://rce2ygcp7xub" path="res://Player/player.tscn" id="2_j8job"]
+[ext_resource type="PackedScene" uid="uid://dq266suxsbslp" path="res://Utility/enemy_spawner.tscn" id="3_j8job"]
+[ext_resource type="PackedScene" uid="uid://djjrpdxo3iuuj" path="res://Objects/xp_gem.tscn" id="4_3f78f"]
+
+[node name="World" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("1_8a836")
+region_enabled = true
+region_rect = Rect2(0, 0, 4000, 4000)
+
+[node name="Player" parent="." instance=ExtResource("2_j8job")]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("3_j8job")]
+
+[node name="Loot" type="Node2D" parent="." groups=["loot"]]
+
+[node name="XpGem" parent="." instance=ExtResource("4_3f78f")]
+position = Vector2(58, -20)
+xp = 5
