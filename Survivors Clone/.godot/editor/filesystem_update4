@@ -1,0 +1,5 @@
+res://World/world.tscn
+res://Player/player.tscn
+res://Utility/basic_button.tscn
+res://TitleScreen/menu.tscn
+res://Player/player.gd

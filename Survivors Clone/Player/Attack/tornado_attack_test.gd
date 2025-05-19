@@ -23,7 +23,26 @@ func _ready():
 			speed = 100.0
 			damage = 30
 			knockback_amount = 100
-			attack_size = 1.0
+			attack_size = 1.0 * (1 + player.spell_size)
+		2:
+			hp = 9999
+			speed = 100.0
+			damage = 30
+			knockback_amount = 100
+			attack_size = 1.0 * (1 + player.spell_size)
+		3:
+			hp = 9999
+			speed = 100.0
+			damage = 30
+			knockback_amount = 100
+			attack_size = 1.0 * (1 + player.spell_size)
+		4:
+			hp = 9999
+			speed = 100.0
+			damage = 30
+			knockback_amount = 125
+			attack_size = 1.0 * (1 + player.spell_size)
+			
 	var move_to_less = Vector2.ZERO
 	var move_to_more = Vector2.ZERO
 	match last_movement:
@@ -68,5 +87,5 @@ func _physics_process(delta: float) -> void:
 	position += angle * speed * delta
 
 func _on_timer_timeout() -> void:
-	emit_signal("remove_from_array")
+	emit_signal("remove_from_arrayd", self)
 	queue_free()
