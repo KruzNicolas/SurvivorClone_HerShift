@@ -1,14 +1,14 @@
-AudioStreamPlayer
+TextureRect
+Panel
 TextureButton
+AudioStreamPlayer
 LinkButton
 Label
 ColorRect
 Control
 Button
 GridContainer
-TextureRect
 TextureProgressBar
 Node
 VBoxContainer
-Panel
 CanvasLayer

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b8qx218xhvb8d"]
 
-[ext_resource type="FontFile" uid="uid://7q7usjv6di0v" path="res://Font/tenderness.otf" id="1_2kd3f"]
 [ext_resource type="Script" uid="uid://6rlona4p25yl" path="res://TitleScreen/menu.gd" id="1_t4alp"]
+[ext_resource type="FontFile" uid="uid://dkbn06sy5fu7m" path="res://Font/dogica.otf" id="2_dsl36"]
 [ext_resource type="PackedScene" uid="uid://7aqniattqyjl" path="res://Utility/basic_button.tscn" id="3_cxswi"]
 [ext_resource type="Texture2D" uid="uid://cr4k6gbadu43s" path="res://Textures/GUI/github-mark-white.png" id="4_yf0qj"]
 [ext_resource type="Texture2D" uid="uid://cjp3tw4y3hh2q" path="res://Textures/GUI/github-mark.png" id="5_0eg15"]
@@ -21,12 +21,17 @@ offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0.290196, 0.494118, 0.796078, 1)
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 100.0
-theme_override_fonts/font = ExtResource("1_2kd3f")
-theme_override_font_sizes/font_size = 72
+theme_override_fonts/font = ExtResource("2_dsl36")
+theme_override_font_sizes/font_size = 48
 text = "Her Shift"
 horizontal_alignment = 1
 vertical_alignment = 1

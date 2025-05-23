@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://0myd5chi730p"]
+
+[ext_resource type="Texture2D" uid="uid://mc8g3yanus50" path="res://Textures/GUI/Button_2.svg" id="1_otbms"]
+[ext_resource type="FontFile" uid="uid://dkbn06sy5fu7m" path="res://Font/dogica.otf" id="1_s2akq"]
+[ext_resource type="Texture2D" uid="uid://ccdugb1l6vyfq" path="res://Textures/GUI/levelup_background.svg" id="2_otbms"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qq4ve"]
+content_margin_top = 6.0
+texture = ExtResource("1_otbms")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_akej6"]
+content_margin_top = 6.0
+texture = ExtResource("1_otbms")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s2akq"]
+texture = ExtResource("2_otbms")
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 10
+Button/fonts/font = ExtResource("1_s2akq")
+Button/styles/hover = SubResource("StyleBoxTexture_qq4ve")
+Button/styles/normal = SubResource("StyleBoxTexture_akej6")
+Panel/styles/panel = SubResource("StyleBoxTexture_s2akq")

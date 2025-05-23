@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b6yti8brvmoth"]
+[gd_scene load_steps=28 format=3 uid="uid://b6yti8brvmoth"]
 
 [ext_resource type="Texture2D" uid="uid://bsmipirwploqs" path="res://Textures/dirt_full_new.png" id="1_8a836"]
 [ext_resource type="PackedScene" uid="uid://rce2ygcp7xub" path="res://Player/player.tscn" id="2_j8job"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cpeaqx5elyn53" path="res://Enemy/enemy_super.tscn" id="9_h2aik"]
 [ext_resource type="AudioStream" uid="uid://c5bgf1pamdhfy" path="res://Audio/Music/Cuphead OST - High Sea Hi-Jinx.mp3" id="11_h2aik"]
 [ext_resource type="Script" uid="uid://dpb6jpb8y0vj2" path="res://Audio/Music/music.gd" id="12_0wqet"]
+[ext_resource type="PackedScene" uid="uid://djjrpdxo3iuuj" path="res://Objects/xp_gem.tscn" id="12_h2aik"]
 
 [sub_resource type="Resource" id="Resource_w47uh"]
 script = ExtResource("4_yf0ba")
@@ -169,6 +170,10 @@ stream = ExtResource("11_h2aik")
 volume_db = -18.0
 autoplay = true
 script = ExtResource("12_0wqet")
+
+[node name="XpGem" parent="." instance=ExtResource("12_h2aik")]
+position = Vector2(50, -39)
+xp = 5
 
 [connection signal="paused" from="Player" to="music" method="_on_player_paused"]
 [connection signal="playerdeath" from="Player" to="music" method="_on_player_playerdeath"]
