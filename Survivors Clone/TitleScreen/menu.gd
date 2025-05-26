@@ -11,7 +11,7 @@ func _on_button_exit_click_end() -> void:
 	get_tree().quit()
 
 func _on_button_credits_click_end() -> void:
-	OS.shell_open("www.youtube.com")
+	var credtis = get_tree().change_scene_to_file("res://TitleScreen/credits.tscn")
 
 func _on_button_git_hub_pressed() -> void:
 	OS.shell_open("https://github.com/KruzNicolas/SurvivorClone_HerShift")

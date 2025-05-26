@@ -1,6 +1,5 @@
 res://World/world.tscn
 res://Textures/GUI/button_theme.tres
 res://Player/player.tscn
-res://Utility/basic_button.tscn
 res://TitleScreen/menu.tscn
-res://Utility/item_option.tscn
+res://TitleScreen/credits.tscn

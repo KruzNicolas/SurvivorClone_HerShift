@@ -1,14 +1,14 @@
+Node
+Label
+Control
 TextureRect
 Panel
 TextureButton
 AudioStreamPlayer
 LinkButton
-Label
 ColorRect
-Control
 Button
 GridContainer
 TextureProgressBar
-Node
 VBoxContainer
 CanvasLayer

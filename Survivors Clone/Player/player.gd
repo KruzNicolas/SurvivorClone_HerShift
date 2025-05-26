@@ -71,7 +71,6 @@ var enemy_close = []
 @onready var soundLose = get_node("%sound_lose")
 @onready var pausePanel = get_node("%PausePanel")
 
-
 #Signal
 signal playerdeath
 signal paused
@@ -87,9 +86,7 @@ func _ready():
 
 func _physics_process(_delta):
 	movement()
-	if Input.is_action_just_pressed("escape"):
-		pause()
-
+		
 func movement():
 	var x_mov = Input.get_action_strength("right") - Input.get_action_strength("left")
 	var y_mov = Input.get_action_strength("down") - Input.get_action_strength("up")
@@ -371,19 +368,16 @@ func death():
 		labelResult.text = "You Lose!"
 		soundLose.play()
 		
-func pause():
-	pausePanel.visible = true
-	emit_signal("paused")
-	get_tree().paused = true
-	var tween = pausePanel.create_tween()
-	tween.tween_property(pausePanel, "position", Vector2(220, 105), 1.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-	tween.play()
+func _on_btn_restart_click_end() -> void:
+	var _level = get_tree().change_scene_to_file("res://World/world.tscn")
 
-func _on_btn_menuu_click_end() -> void:
+func _on_btn_menu_click_end() -> void:
 	get_tree().paused = false
 	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")
 
-func _on_btn_resume_click_end() -> void:
-	pausePanel.visible = false
+
+func _on_pause_controller_paused() -> void:
+	emit_signal("paused")
+
+func _on_pause_controller_unpaused() -> void:
 	emit_signal("unpaused")
-	get_tree().paused = false

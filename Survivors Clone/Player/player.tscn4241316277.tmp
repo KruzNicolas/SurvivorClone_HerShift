@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://rce2ygcp7xub"]
+[gd_scene load_steps=20 format=3 uid="uid://rce2ygcp7xub"]
 
 [ext_resource type="Script" uid="uid://bkfa2610ptws8" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://bf234f64fg8t0" path="res://Textures/Player/Riley_sprites.png" id="2_btcbx"]
@@ -14,7 +14,6 @@
 [ext_resource type="AudioStream" uid="uid://xmfxewb37vu7" path="res://Audio/SoundEffect/Victory.wav" id="10_apopc"]
 [ext_resource type="AudioStream" uid="uid://ctfvjlefso2qu" path="res://Audio/SoundEffect/Lose.ogg" id="11_5htga"]
 [ext_resource type="PackedScene" uid="uid://7aqniattqyjl" path="res://Utility/basic_button.tscn" id="12_5htga"]
-[ext_resource type="Script" uid="uid://bqpr6b1ibif1l" path="res://Player/pause_controller.gd" id="15_dkpta"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
 radius = 6.0
@@ -238,10 +237,6 @@ offset_right = 140.0
 offset_bottom = 89.0
 text = "Restart"
 
-[node name="PauseController" type="Node" parent="GUILayer/GUI"]
-process_mode = 3
-script = ExtResource("15_dkpta")
-
 [node name="PausePanel" type="Panel" parent="GUILayer/GUI"]
 unique_name_in_owner = true
 process_mode = 2
@@ -325,9 +320,7 @@ columns = 10
 [connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]
 [connection signal="click_end" from="GUILayer/GUI/DeathPanel/btn_menu" to="." method="_on_btn_menu_click_end"]
 [connection signal="click_end" from="GUILayer/GUI/DeathPanel/btn_restart" to="." method="_on_btn_restart_click_end"]
-[connection signal="paused" from="GUILayer/GUI/PauseController" to="." method="_on_pause_controller_paused"]
-[connection signal="unpaused" from="GUILayer/GUI/PauseController" to="." method="_on_pause_controller_unpaused"]
-[connection signal="click_end" from="GUILayer/GUI/PausePanel/btn_resume" to="GUILayer/GUI/PauseController" method="_on_btn_resume_click_end"]
-[connection signal="click_end" from="GUILayer/GUI/PausePanel/btn_menu" to="GUILayer/GUI/PauseController" method="_on_btn_menu_click_end"]
+[connection signal="click_end" from="GUILayer/GUI/PausePanel/btn_resume" to="." method="_on_btn_resume_click_end"]
+[connection signal="click_end" from="GUILayer/GUI/PausePanel/btn_menu" to="." method="_on_btn_menu_click_end"]
 
 [editable path="HurtBox"]

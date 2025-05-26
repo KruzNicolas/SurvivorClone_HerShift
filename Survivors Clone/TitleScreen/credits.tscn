@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj0qus1dp3d0r"]
+
+[ext_resource type="Texture2D" uid="uid://dwojpmi3fkoqf" path="res://Textures/Menu.jpg" id="1_3fj0m"]
+[ext_resource type="Script" uid="uid://dxtgy4s8svyl7" path="res://TitleScreen/credits.gd" id="1_5m1kn"]
+[ext_resource type="FontFile" uid="uid://dkbn06sy5fu7m" path="res://Font/dogica.otf" id="2_eemwe"]
+[ext_resource type="PackedScene" uid="uid://7aqniattqyjl" path="res://Utility/basic_button.tscn" id="3_eemwe"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_5m1kn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("1_3fj0m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 0.882353)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 639.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_eemwe")
+theme_override_font_sizes/font_size = 12
+text = "Her Shift
+
+ODS 5 - Gender Equality
+
+Programming
+- Nicolas Romero
+
+Character & Scenery Design
+- Sara Katerin Wilches
+
+UI Design
+-Daniela Torres
+
+Special Thanks to
+@BrannoDev, for creating the
+tutorials that made this game possible"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button_back" parent="." instance=ExtResource("3_eemwe")]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 279.0
+offset_right = 360.0
+offset_bottom = 309.0
+text = "Back"
+
+[connection signal="click_end" from="button_back" to="." method="_on_button_back_click_end"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g4burkyhsmru"
-path="res://.godot/imported/kolbold_strong.png-2c41eafd38044753ad1bb98731873567.ctex"
+uid="uid://bjxq16kqh21gy"
+path="res://.godot/imported/background_definitive.jpg-6bdec9cf2e824ba8abe3ec21ae5c79e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Enemy/kolbold_strong.png"
-dest_files=["res://.godot/imported/kolbold_strong.png-2c41eafd38044753ad1bb98731873567.ctex"]
+source_file="res://Textures/background_definitive.jpg"
+dest_files=["res://.godot/imported/background_definitive.jpg-6bdec9cf2e824ba8abe3ec21ae5c79e1.ctex"]
 
 [params]
 
