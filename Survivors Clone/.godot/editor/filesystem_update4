@@ -1,5 +1,9 @@
-res://World/world.tscn
-res://Textures/GUI/button_theme.tres
 res://Player/player.tscn
+res://Textures/GUI/button_theme.tres
+res://World/world.tscn
 res://TitleScreen/menu.tscn
 res://TitleScreen/credits.tscn
+res://Utility/enemy_spawner.gd
+res://Player/player.gd
+res://Enemy/enemy_cyclops.tscn
+res://TitleScreen/menu.gd

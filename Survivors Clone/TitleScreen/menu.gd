@@ -17,4 +17,4 @@ func _on_button_git_hub_pressed() -> void:
 	OS.shell_open("https://github.com/KruzNicolas/SurvivorClone_HerShift")
 
 func _on_button_youtube_pressed() -> void:
-	OS.shell_open("www.youtube.com")
+	OS.shell_open("https://www.youtube.com/watch?v=Y3sxIs5b9Wo")
